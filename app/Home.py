@@ -10,6 +10,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
+from statsmodels.formula.api import ols
+import seaborn as sns
+from statsmodels.formula.api import ols
+import statsmodels as sm
+import plotly
+import plotly.express as px
+import plotly.graph_objects as go
 st.set_page_config(
     page_title="Basic econometrics illustrated",
     page_icon="chart_with_upwards_trend",
@@ -35,3 +42,11 @@ This app is being developped by Florian Chávez from CORESO - Collaboartive Rese
 
 #st.sidebar.image("resources/coreso.png", width=100)
 
+#
+#
+#st.write("Pandas",pd.__version__)
+#st.write("numpy",np.__version__)
+#st.write("altair",alt.__version__)
+#st.write("plotly",plotly.__version__)
+#st.write("Seaborn",sns.__version__)
+#st.write("Statsmodels",sm.__version__)
