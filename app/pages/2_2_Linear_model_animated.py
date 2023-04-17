@@ -204,7 +204,7 @@ with st.empty():
     
         
     mylist = np.arange(n_start,n_end+delta,delta).tolist()
-    st.write(mylist)
+    #st.write(mylist)
     for n in mylist: 
         
         st.pyplot(genPlot(df,n))
