@@ -166,8 +166,8 @@ def genPlot(data,thisN):
     # RIGHT GRAPH
     est = st.session_state['est']
     est = pd.DataFrame({"key":est.keys(),"coefs":est.values()})
-    est[['seed', 'n']] = est['key'].str.split(':', 1, expand=True)
-    est[['beta','cint']] = est['coefs'].str.split(":",1,expand=True)
+    est[['seed', 'n']] = est['key'].str.split(pat=':',n=1, expand=True)
+    est[['beta','cint']] = est['coefs'].str.split(pat=":",n=1,expand=True)
     currentSeed = st.session_state['seed']
     
     est.n = est.n.astype(int)
@@ -226,7 +226,7 @@ with c3:
     pvals = st.session_state['pvalues']
     data = pd.DataFrame({"key":pvals.keys(),"pvalue":pvals.values()})
     
-    data[['seed', 'n']] = data['key'].str.split(':', 1, expand=True)
+    data[['seed', 'n']] = data['key'].str.split(pat=':',n= 1, expand=True)
     
     data.n = data.n.astype("int")
     
