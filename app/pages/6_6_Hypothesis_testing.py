@@ -89,9 +89,9 @@ c[0].metric(label="True positive",value=truePositive,delta="%.2f%%" %(100*truePo
 c[1].metric(label="True negative",value=trueNegative,delta="%.2f%%" %(100*trueNegative/n_all), delta_color='off')
 c[2].metric(label="False positive",value=falsePositive,delta="%.2f%%" %(100*falsePositive/n_all), delta_color='off')
 c[3].metric(label="False negative",value=falseNegative,delta="%.2f%%" %(100*falseNegative/n_all), delta_color='off')
-c[4].metric(label="Type I  error",value = "%.2f%%" % 100((falsePositive / (falsePositive + trueNegative))))
-c[5].metric(label="Type II  error",value = "%.2f%%" % (100*(falseNegative / (falseNegative + truePositive))))
-c[6].metric(label="P(unfair | test => unfair)",value = "%.2f%%" % (100 * (truePositive / (truePositive + falsePositive))))
+c[4].metric(label="Type I  error",value = "%.2f%%" % ((falsePositive / (falsePositive + trueNegative))*100))
+c[5].metric(label="Type II  error",value = "%.2f%%" % ((falseNegative / (falseNegative + truePositive))*100))
+c[6].metric(label="P(unfair | test => unfair)",value = "%.2f%%" % ((truePositive / (truePositive + falsePositive))*100))
 
 
 
