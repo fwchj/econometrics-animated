@@ -41,8 +41,8 @@ with c2:
     alpha = st.selectbox("Confidence level",options=alphas.keys(),key='alpha',format_func=lambda x: alphas[x])
 with c3: 
     mu = st.slider("$\\mu$ (probabilty of heads when using the unfair coin)",value=0.6,key="mu",min_value=0.00,max_value=1.0,step=0.05)
-    n_h0  = st.slider("Number of samples with **fair coin**$ ",min_value=5,max_value=1000,value=50,key="n_h0")
-    n_ha  = st.slider("Number of samples with **unfair coin**$ ",min_value=5,max_value=1000,value=50,key="n_ha")
+    n_h0  = st.slider("Number of samples with **fair coin** ",min_value=5,max_value=1000,value=50,key="n_h0")
+    n_ha  = st.slider("Number of samples with **unfair coin** ",min_value=5,max_value=1000,value=50,key="n_ha")
 
 
 
